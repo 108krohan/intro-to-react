@@ -260,7 +260,7 @@ Or, we can install a library from `npm` that will help.
 [Bootstrap](http://getbootstrap.com/) is popular UI toolkit for HTML and CSS. Let's install it, alongside `react-bootstrap` which provides the React components for it:
 
 ```sh
-npm install --save bootstrap react-bootstrap
+npm install --save bootstrap@3 react-bootstrap@0.30.8
 ```
 
 In the top of the app file, import the css from the bootstrap module:
@@ -274,6 +274,7 @@ Next, import the components we want to use from `react-bootstrap`. You can find 
 ```js
 import { Navbar, NavItem, Nav, Grid, Row, Col } from "react-bootstrap";
 ```
+**Side note** In later versions of react-bootstrap the *Grid* is renamed as *'Container'*. Also, in later versions, the *Navbar.Header* isn't available in [the Navbar API](https://react-bootstrap.netlify.com/components/navbar/#navbar-api).
 
 Now, replace the App component's render function to use the bootstrap components:
 
@@ -316,7 +317,7 @@ Now, replace the App component's render function to use the bootstrap components
 Now our app is starting to look more polished, but it would be nice to have a custom theme. We can install `bootswatch` to do that.
 
 ```sh
-npm install --save bootswatch
+npm install --save bootswatch@3
 ```
 
 [Browse the bootswatch website](http://bootswatch.com/) to find a theme, and install it by replacing the import of bootstrap css with the following. In this case we are using the 'journal' theme.
